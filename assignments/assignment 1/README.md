@@ -32,6 +32,18 @@ Replace <chosen_image_number> with the number of the target image (e.g., 1 for i
 ### CSV File
 The CSV file contains filenames and chi-squared distances of the top five similar images.
 
+#### Results
+| Image ID | Distance |
+|------------|----------|
+| 754        | 327.47   |
+| 1079       | 354.01   |
+| 532        | 360.85   |
+| 771        | 361.43   |
+| 747        | 362.21   |
+
+Top five most similar to image 120, which was chosen as the target image.
+Distance is the Chi-Squared distance from the target image.
+
 ### Plot
 The plot shows the chosen target image and the top five similar images.
 

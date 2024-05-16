@@ -59,8 +59,10 @@ The CSV file contains filenames and chi-squared distances of the top five simila
 Top five most similar to image 1 (chosen as the target image). Distance is the Chi-Squared distance from the target image.
 
 #### Plot
-The plot shows the chosen target image and the top five similar images.
-![Colour Histogram Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_image_0001.jpg.png)
+The plot shows the chosen target image and the top five similar images predicted by comparing colour histograms
+
+
+![Colour Histogram Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
 
 ### VGG16 Classification Method
 
@@ -79,21 +81,23 @@ The CSV file contains filenames and Euclidean distances of the top five similar 
 Top five most similar to image 1 (chosen as the target image). Distance is the Euclidean distance from the target image.
 
 #### Plot
-The plot shows the chosen target image and the top five similar images.
-![VGG16 Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_image_0001.jpg.png)
+The plot shows the chosen target image and the top five similar images predicted by VGG16.
+
+![VGG16 Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
 ## Rank Comparison
 A rank comparison was performed to evaluate the overlap between the top similar images identified by both methods. The comparison shows no overlap between the chosen pictures using the two methods.
 
-### Colour Histogram Method
-![Colour Histogram Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_image_0001.jpg.png)
+### Colour Histogram
+![Colour Histogram Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
 
-### VGG16 Classification Method
-![VGG16 Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_image_0001.jpg.png)
+
+### VGG16 Classification 
+![VGG16 Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
 ## Limitations
 ### Colour Histogram Method
-Insensitive to Texture and Shape: The method only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. For instance, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the histogram-comparison method, and suggests that other methods might be more suitable for finding similar pictures.
+Insensitive to Texture and Shape: The method only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. For instance, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
 
 
 ### Summary of Results

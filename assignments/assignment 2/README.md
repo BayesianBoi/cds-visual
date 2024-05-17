@@ -1,9 +1,9 @@
 # Assignment 2 - Classification benchmarks with Logistic Regression and Neural Networks
 
 ## Repository Overview
-This repository contains scripts to classify the CIFAR-10 dataset using Logistic Regression and Neural Networks. Additionally, a CNN modelusing VGG16 is also implemented to check if the accuracy can be increased.
+This repository contains scripts to classify the CIFAR-10 dataset using Logistic Regression and Neural Networks. Additionally, a CNN model using VGG16 is also implemented to check if the accuracy can be increased.
 
-### Assignment objective:
+### Assignment Objective:
 1. Load the CIFAR-10 dataset.
 2. Preprocess the data (e.g. grayscale, normalize, reshape).
 3. Train a classifier on the data:
@@ -15,36 +15,38 @@ This repository contains scripts to classify the CIFAR-10 dataset using Logistic
 ## Data
 The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/cifar.html).
 
-## Steps to run the analysis
+## Steps to Run the Analysis
 
 ### Setting Up the Environment
 1. **Run the setup:**
    
-```bash
-sh setup.sh
-```
+    ```bash
+    sh setup.sh
+    ```
+
 ### Running the Code
 The project is structured with scripts saved in the `src` folder and the output saved in the `out` folder.
 
 #### Logistic Regression
 To run the logistic regression script:
 
-```bash
-python src/logistic_regression.py
-```
+    ```bash
+    python src/logistic_regression.py
+    ```
 
 #### Neural Network
 To run the neural network script:
 
-```bash
-python src/neural_network.py
-```
+    ```bash
+    python src/neural_network.py
+    ```
+
 #### VGG16
 To run the VGG16 script:
 
-```bash
-python src/vgg16_classifier.py
-```
+    ```bash
+    python src/vgg16_classifier.py
+    ```
 
 ## Summary of Results
 ### Logistic Regression
@@ -68,7 +70,6 @@ python src/vgg16_classifier.py
 | **Macro Avg** | 0.31    | 0.32   | 0.31     | 10000   |
 | **Weighted Avg** | 0.31 | 0.32   | 0.31     | 10000   |
 
-
 ### Neural Network
 ##### **Model Accuracy: 0.44**
 
@@ -90,7 +91,6 @@ python src/vgg16_classifier.py
 | **Macro Avg** | 0.44    | 0.44   | 0.44     | 10000   |
 | **Weighted Avg** | 0.44 | 0.44   | 0.44     | 10000   |
 
-
 ### VGG16 (CNN)
 Note: The VGG16 model implementation is an additional exploration and not the primary focus of the assignment.
 
@@ -98,13 +98,19 @@ Note: The VGG16 model implementation is an additional exploration and not the pr
 
 #### **Classification Report:**
 
-
 ## Discussion of Limitations and Possible Improvements
-### Limitations:
+
+### Limitations
+
 **1. Logistic Regression:**
 - Limited capability to capture complex patterns in the data, which could explain the low accuracy of .32 for the classification.
 - Looking at the heatmap..
-  
+
 **2. Neural Network:**
-- Despite being more accurate than logistic regression, the simple MLP used here still struggles with the classification 
+- Despite being more accurate than logistic regression, the simple MLP used here still struggles with the classification.
 - The heatmap suggests...
+
+### Improvements
+
+- **Use of CNNs:** Convolutional Neural Networks (CNNs), like the VGG16 model, are better suited for image classification.
+- **Data Augmentation:** Implementing data augmentation can help improve generalization by artificially increasing the size and variability of the training data.

@@ -98,6 +98,36 @@ Note: The VGG16 model implementation is an additional exploration and not the pr
 
 #### **Classification Report:**
 
+## Discussion
+
+### Steps Taken for Logistic and Neural Network Regression
+
+**Logistic Regression:**
+- **Preprocessing:** Images were converted to grayscale, normalized, and flattened.
+- **Training:** The logistic regression model was trained using scikit-learn's LogisticRegression with hyperparameter tuning via GridSearchCV.
+- **Evaluation:** A classification report and confusion matrix were generated to evaluate model performance.
+
+**Neural Network:**
+- **Preprocessing:** Similar preprocessing steps were taken as for logistic regression.
+- **Training:** An MLPClassifier from scikit-learn was used with hyperparameter tuning. Early stopping and model checkpointing were implemented to optimize training.
+- **Evaluation:** The model's performance was assessed using a classification report and confusion matrix.
+
+### Considerations for the VGG16 Model
+In implementing the VGG16 model, several considerations were taken into account, inspired by [this Kaggle notebook](https://www.kaggle.com/code/vtu5118/cifar-10-using-vgg16):
+
+**Data Augmentation:** 
+- Parameters for data augmentation included rotation, zoom, width shift, height shift, shear, and horizontal flip, all set to enhance the training dataset's diversity.
+
+**Network Structure:** 
+- The VGG16 model's convolutional base was used with additional Dense layers and Dropout layers to improve generalization and reduce overfitting.
+
+**SGD Parameters:** 
+- The model was trained using the SGD optimizer with a learning rate of 0.001 and a momentum of 0.9.
+
+**Hyperparameters:** 
+- The training was conducted over 100 epochs with a batch size of 128, following the approach detailed in the referenced Kaggle notebook.
+
+
 ## Discussion of Limitations and Possible Improvements
 
 ### Limitations

@@ -20,9 +20,9 @@ The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/c
 ### Setting Up the Environment
 1. **Run the setup:**
    
-    ```bash
-    sh setup.sh
-    ```
+```bash
+sh setup.sh
+```
 
 ### Running the Code
 The project is structured with scripts saved in the `src` folder and the output saved in the `out` folder.
@@ -30,23 +30,23 @@ The project is structured with scripts saved in the `src` folder and the output 
 #### Logistic Regression
 To run the logistic regression script:
 
-    ```bash
-    python src/logistic_regression.py
-    ```
+``` 
+python src/logistic_regression.py
+```
 
 #### Neural Network
 To run the neural network script:
 
-    ```bash
-    python src/neural_network.py
-    ```
+```bash
+python src/neural_network.py
+```
 
 #### VGG16
 To run the VGG16 script:
 
-    ```bash
-    python src/vgg16_classifier.py
-    ```
+```bash
+python src/vgg16_classifier.py
+```
 
 ## Summary of Results
 ### Logistic Regression

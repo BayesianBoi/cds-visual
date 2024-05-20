@@ -13,13 +13,13 @@ def load_model():
     """
     Loads the VGG16 model
     """
-    base_model = VGG16(weights='imagenet') # using imagenet pretrained model
-    model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc2').output)
+    base_model = VGG16(weights="imagenet") # using imagenet pretrained model
+    model = Model(inputs=base_model.input, outputs=base_model.get_layer("fc2").output)
     return model
 
 def preprocess_image(img_path):
     """
-    Preprocesses the input image for VGG16 by resizing the image to the required 224x224, converting it to array and
+    Preprocesses the input image for VGG16 by resizing the image to the VGG16 model's required 224x224, converting it to array and
     expanding its dimensions.
     """
     img = image.load_img(img_path, target_size=(224, 224)) # Resizing to 224x224 pixels
@@ -30,7 +30,7 @@ def preprocess_image(img_path):
 
 def extract_features(model, img_data):
     """
-    Extracts features from the images
+    Extracts the features from the images
     """
     features = model.predict(img_data)
     return features
@@ -55,7 +55,7 @@ def main(chosen_image_number):
 
     # check if the image is loaded properly
     if chosen_image is None:
-        raise ValueError(f"Chosen image not found at {chosen_image_path}. Choose another number between 1 and 1360")
+        raise ValueError(f"Image not found. Choose another number between 1 and 1360")
 
     # Load vgg16
     model = load_model()
@@ -73,13 +73,13 @@ def main(chosen_image_number):
             img_data = preprocess_image(img_path)
             img_features = extract_features(model, img_data)
             
-            distance = np.linalg.norm(chosen_image_features - img_features) # calculate similarity
+            distance = np.linalg.norm(chosen_image_features - img_features) # calculate similarity in euclidean distance
             results.append((img_file, distance))
 
     # Sort results by distance
     results.sort(key=lambda x: x[1])
 
-    # Get the top 5 most similar images
+    # get the top 5 most similar images
     top_five = results[:5]
 
     # Save the results to CSV in the output folder
@@ -104,7 +104,7 @@ def main(chosen_image_number):
     plt.title(f"Chosen Image: {int(chosen_image_number)}")
     plt.axis("off")
 
-    # Plotting the most similar images
+    # plotting the most similar images
     for i, (filename, _) in enumerate(top_five, start=2):
         image_path = os.path.join(input_folder, filename)
         image = cv2.imread(image_path)

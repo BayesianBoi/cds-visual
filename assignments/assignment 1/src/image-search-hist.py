@@ -22,7 +22,7 @@ def hist_similarity(hist1, hist2):
     """
     return round(cv2.compareHist(hist1, hist2, cv2.HISTCMP_CHISQR), 2)
 
-# Resize image for uniform plotting
+# Resize image for niiice plotting
 def resize_image(image, size=(300, 300)):
     """
    Resizes the input image to 300x300 to use in plotting the images afterwards.
@@ -42,14 +42,14 @@ def main(chosen_image_number):
 
     # Check if the image is loaded properly
     if chosen_image is None:
-        raise ValueError(f"Chosen image not found at {chosen_image_path}. Choose another number between 1 and 1360")
+        raise ValueError(f"Image not found. Choose another image between 1 and 1360")
 
     similar_images = [] # Creating a list to store the similarity
 
     # Calculate the colour histogram of the chosen picture
     chosen_hist = colour_hist(chosen_image)
 
-    image_files = [f for f in os.listdir(input_folder) if f != chosen_image_filename] # Adding the images to a list excluding the chosen image
+    image_files = [image for image in os.listdir(input_folder) if image != chosen_image_filename] # Adding the images to a list excluding the chosen image
     total_images = len(image_files) #calculating the total number of images to use in the progress bar
 
     for idx, imagefile in enumerate(image_files, start=1): # Using index to add progress bar to the analysis
@@ -67,16 +67,16 @@ def main(chosen_image_number):
 
         # progress bar for every 100 images processed
         if idx % 100 == 0:
-            print(f"Analyzed {idx}/{total_images} of the images")
+            print(f"Analysed {idx}/{total_images} of the images")
 
-    similar_images.sort(key=lambda rank: rank[1]) # Sorting by the second element (similarity)
+    similar_images.sort(key=lambda rank: rank[1]) # sorting by similarity which is second element
 
     top_five = similar_images[:5] # Ranking the top five most similar images
 
     # Save the results to CSV in the output folder
     csv_filename = f"hist_{chosen_image_filename}.csv"
     output_csv_path = os.path.join(output_folder, csv_filename)
-    os.makedirs(output_folder, exist_ok=True) # makes output folder if it doesn't exist
+    os.makedirs(output_folder, exist_ok=True) # makes output folder if it doesnt exist
     with open(output_csv_path, "w") as csv:
         csv.write("Filename,Distance\n") # creating columns with the filename and distance
         csv.write(f"CHOSEN PICTURE: {chosen_image_filename},0.0\n")

@@ -28,7 +28,7 @@ def train_model(train_generator, test_generator, categories):
     model.compile(optimizer=Adam(learning_rate=0.00001), loss="categorical_crossentropy", metrics=["accuracy"]) # compiling the model with adam optimiser and a very low learning rate using 
 
     early_stopping = EarlyStopping(monitor="val_loss", patience=10, restore_best_weights=True) # to prevent overfitting; uses loss in validation to stop earlier
-    model_checkpoint = ModelCheckpoint("out/best_model.keras", monitor="val_loss", save_best_only=True) # saves the best fitting model if early stop
+    model_checkpoint = ModelCheckpoint("out/best_model.keras", monitor="val_loss", save_best_only=True) # saves the best fitting model if early stop. Wanted to upload it to Github but it is sadly too big (even when compressed)
 
     # training the model
     history = model.fit(

@@ -1,9 +1,9 @@
 # Image Search Using Colour Histograms and VGG16
 
-## Repository Overview
+## Repository overview
 This repository contains Python scripts to find similar images using two different methods: colour histograms and a pretrained VGG16 model. Both methods extract and compare features to identify the top five most similar images to a chosen target image.
 
-### Assignment Objective
+### Assignment objective
 The objective of this task was to build a simple image search algorithm using a dataset of over 1000 images of flowers. The specific steps involved are:
 1. Choose a target image to work with.
 2. Extract the colour histogram of the target image using OpenCV.
@@ -13,12 +13,12 @@ The objective of this task was to build a simple image search algorithm using a 
 6. Save a CSV file showing the five most similar images and their distance metrics.
 7. Save a plot showing the target image and the five most similar images.
 
-## Data Source
+## Data source
 The dataset consists of 1360 images of flowers from 17 species, provided by the Visual Geometry Group at the University of Oxford. Download the dataset from [here](http://www.robots.ox.ac.uk/~vgg/data/flowers/17/) and place the images in the `../in/flowers` directory.
 
-## Rerunning the Analysis
+## Steps for running the analysis
 
-### Colour Histogram Method
+### Colour histogram
 1. Run the setup in bash:
     ```bash
     sh setup.sh
@@ -29,7 +29,7 @@ The dataset consists of 1360 images of flowers from 17 species, provided by the 
     ```
    Replace `<chosen_image_number>` with the number of the target image (e.g., `1` for `image_0001.jpg`).
 
-### VGG16 Classification Method
+### VGG16 classification
 1. Run the setup in bash:
     ```bash
     sh setup.sh
@@ -42,9 +42,9 @@ The dataset consists of 1360 images of flowers from 17 species, provided by the 
 
 ## Outputs (found in */out*)
 
-### Colour Histogram Method
+### Colour histogram
 
-#### CSV File
+#### CSV file
 The CSV file contains filenames and chi-squared distances of the top five similar images.
 
 #### Results
@@ -64,9 +64,9 @@ The plot shows the chosen target image and the top five similar images predicted
 
 ![Colour Histogram Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
 
-### VGG16 Classification Method
+### VGG16 classification
 
-#### CSV File
+#### CSV file
 The CSV file contains filenames and Euclidean distances of the top five similar images.
 
 #### Results
@@ -85,21 +85,21 @@ The plot shows the chosen target image and the top five similar images predicted
 
 ![VGG16 Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
-## Rank Comparison
+## Rank comparison
 A rank comparison was performed to evaluate the overlap between the top similar images identified by both methods. The comparison shows no overlap between the chosen pictures using the two methods.
 
-### Colour Histogram
+### Colour histogram
 ![Colour Histogram Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
 
 
-### VGG16 Classification 
+### VGG16 classification 
 ![VGG16 Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
 ## Limations and Possible Improvements
 
 ### Limitations
-#### Colour Histogram Method
-The colour historigram method is insensitive to texture and shape- meaning it only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. For instance, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
+#### Colour Histogram
+The colour historigram is insensitive to texture and shape- meaning it only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. For instance, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
 
 ### Possible Improvements
 #### Using more advanced methods

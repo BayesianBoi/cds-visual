@@ -1,10 +1,10 @@
 # Assignment 4 - Detecting Faces in Historical Newspapers
 
-## Repository Overview
+## Repository overview
 This repository contains scripts to analyze historical newspapers for the presence of human faces. The primary goal is to detect and track the prevalence of faces in newspaper images over the past 200 years. 
 We use a pre-trained CNN model for face detection and analyse the results by decade.
 
-### Assignment Objective
+### Assignment objective
 1. For each of the three newspapers:
     - **Gazette de Lausanne (GDL, 1790-2000)**
     - **Journal de Genève (JDG, 1820-1990)**
@@ -14,16 +14,16 @@ We use a pre-trained CNN model for face detection and analyse the results by dec
     - A CSV showing the total number of faces per decade and the percentage of pages for that decade with faces.
     - A plot showing the percentage of pages with faces per decade for each newspaper.
 
-## Data Source
+## Data source
 The data for this assignment is available from here [here](https://zenodo.org/records/3706863).
 It should be inserted into the **/in** folder before proceding with the analysis.
 
-## Steps to running the code
+## Steps for running the code
 
-### Running the Code
+### Running the code
 The project is structured with scripts saved in the `src` folder and the output saved in the `out` folder.
 
-#### Main Script
+#### Main script
 1. To run the setup script:
   ```bash
 
@@ -49,33 +49,33 @@ To run the plotting script for detected faces from GDL 1780-1880:
 python src/plot_faces.py
 ```
 
-## Summary of Results
-### Percentage of Pages That Contain Faces per Decade
+## Summary of results
+### Percentage of pages that contain faces per decade
 #### Gazette de Lausanne (GDL)
 
 #### Journal de Genève (JDG)
 
 #### Impartial (IMP)
 
-### Detected Faces in GDL Newspapers (1790-1880)
+### Detected faces in GDL newspaper (1790-1880)
 
 ## Discussion
-### Key Points
+### Key points
 - The prevalence of faces in newspapers increases significantly over the decades, especially from the late 19th century onwards.
 - All of the newspapers show a rise in face images around the 20th century, which could reflect the advances in photographic technology through that centuary.
 
-### False Positives in GDL (1790-1880)
+### False positives in GDL (1790-1880)
 The analysis of the GDL newspaper from 1790 to 1880 indicates purely false positives. The model incorrectly identifies faces in images from this period, likely due to the lower quality and nature of the printed images.
 
-### Historical Context
+### Historical context
 The results align with historical developments in print media. The introduction of photographic technology in the 19th century and its widespread adoption in the 20th century led to an increase in images, 
 including human faces, in newspapers. This reflects broader cultural and technological shifts towards more visually-oriented media.
 
-## Limitations and Possible Improvements
+## Limitations and possible improvements
 ### Limitations
-- **False Positives:** The model shows a significant number of false positives, especially in older newspapers where the print quality is lower.
-- **Data Quality:** Variations in the quality and type of newspaper images can affect the accuracy of face detection.
+- **False positives:** The model shows a significant number of false positives, especially in older newspapers where the print quality is lower.
+- **Data quality:** Variations in the quality and type of newspaper images can affect the accuracy of face detection.
 
-### Possible Improvements
-- **Model Tuning:** Further tuning of the face detection model could help reduce the number of false positives.
-- **Image Preprocessing:** Improved preprocessing steps might improve detection accuracy.
+### Possible improvements
+- **Model tuning:** Further tuning of the face detection model could help reduce the number of false positives.
+- **Image preprocessing:** Improved preprocessing steps might improve detection accuracy.

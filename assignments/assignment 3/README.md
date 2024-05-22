@@ -1,16 +1,14 @@
-# Document Classification Using Pretrained Image Embeddings
+# Assignment 3 - Document classification using pretrained image embeddings
 
 ## Repository overview
 
 This project aims to classify documents based on their visual appearance using a pretrained VGG16 model. The documents are classified into categories such as advertisements, emails and forms. This task focuses on predicting the type of document based solely on its appearance rather than its contents.
 
 ### Assignment objectives
-
-The objectives for this assignment are:
-- Load the Tobacco3482 data and generate labels for each image.
-- Train a classifier to predict document type based on visual features.
-- Present a classification report and learning curves for the trained classifier.
-- Include a short description of what the classification report and learning curve show.
+1. Load the Tobacco3482 data and generate labels for each image.
+2. Train a classifier to predict document type based on visual features.
+3. Present a classification report and learning curves for the trained classifier.
+4. Include a short description of what the classification report and learning curve show.
 
 ## Data source
 
@@ -20,21 +18,25 @@ The dataset used is a subset of the Tobacco3482 dataset. It contains images of 1
 ## Steps for running the analysis
 
 ### Setting up the environment
-- **Run the setup script**:
-
-```sh
-bash setup.sh
-```
+1. **Set up the virtual environment and install requirements:**
+    ```bash
+    sh setup.sh
+    ```
+2. **Activate the virtual environment:**
+    ```bash
+    source envVis4/bin/activate
+    ```
 
 ### Running the code
-- **Place your dataset in the in/Tobacco3482 directory and run the below code:**
+1. **[Download](https://www.kaggle.com/datasets/patrickaudriaz/tobacco3482jpg?resource=download) and place the data set in the `/in` folder**
 
-```sh
-python main.py
-```
+2. **Run the main analysis script:**
+    ```bash
+    python src/main_analysis.py
+    ```
 This script will load the data, train the model and evaluate the model.
 
-## Summary of the outputs
+## Summary of results
 ### Classification report
 
 | Class        | Precision | Recall | F1-Score | Support |
@@ -60,6 +62,7 @@ This script will load the data, train the model and evaluate the model.
 ![Confusion Matrix](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%203/out/confusion_matrix.png)
 
 ## Discussion
+### Key points
 The model achieved an overall accuracy of 84%, which is good given the task of document classification based on visual appearance alone. I have seen other multi-modal approaches that reached a similar accuracy. The confusion matrix indicates that most classes are predicted well.
 
 ### Loss curve

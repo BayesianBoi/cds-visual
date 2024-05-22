@@ -4,7 +4,7 @@
 python3 -m venv envVis4
 
 # Activate the virtual environment
-source envVis3/bin/activate
+source envVis4/bin/activate
 
 # Upgrade pip
 pip install --upgrade pip

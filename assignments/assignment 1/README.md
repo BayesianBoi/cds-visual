@@ -3,7 +3,7 @@
 ## Description
 This repository contains Python scripts to find similar images using two different methods: colour histograms and a pretrained VGG16 model. Both methods extract and compare features to identify the top five most similar images to a chosen target image.
 
-## Objective
+### Assignment Objective
 The objective of this task was to build a simple image search algorithm using a dataset of over 1000 images of flowers. The specific steps involved are:
 1. Choose a target image to work with.
 2. Extract the colour histogram of the target image using OpenCV.
@@ -95,10 +95,13 @@ A rank comparison was performed to evaluate the overlap between the top similar 
 ### VGG16 Classification 
 ![VGG16 Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
+## Limations and Possible Improvements
+
 ## Limitations
 ### Colour Histogram Method
-Insensitive to Texture and Shape: The method only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. For instance, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
+The colour historigram method is insensitive to texture and shape- meaning it only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. For instance, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
 
-
-### Summary of Results
+### Possible Improvements
+### Using more advanced methods
 The VGG16 classification method outperformed the colour histogram method in identifying similar images. The VGG16 model correctly classified all five similar images, while the colour histogram method did not correctly classify any of the similar images.
+

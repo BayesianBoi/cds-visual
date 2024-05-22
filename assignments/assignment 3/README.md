@@ -24,7 +24,7 @@ The dataset used is a subset of the Tobacco3482 dataset. It contains images of 1
     ```
 2. **Activate the virtual environment:**
     ```bash
-    source envVis4/bin/activate
+    source envVis3/bin/activate
     ```
 
 ### Running the code

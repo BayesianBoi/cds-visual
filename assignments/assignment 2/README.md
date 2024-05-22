@@ -23,7 +23,7 @@ The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/c
     ```
 2. **Activate the virtual environment:**
     ```bash
-    source envVis4/bin/activate
+    source envVis2/bin/activate
     ```
 
 ### Running the Code

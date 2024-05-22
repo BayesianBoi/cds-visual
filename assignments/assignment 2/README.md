@@ -145,7 +145,7 @@ Note: The VGG16 model implementation is additional exploration and not the prima
 - **Evaluation:** The model's performance was assessed using a classification report, loss-curve and confusion matrix
 
 ### Considerations for the VGG16 Model
-The VGG16 model was inspired by [this Kaggle notebook](https://www.kaggle.com/code/vtu5118/cifar-10-using-vgg16). We implemented data augmentation, a similar network structure with additional dense layers and dropout layers, the same SGD parameters with a learning rate of .001 and a momentum of .9, and the same epoch and batch size of 100 and 128, respectively. However, despite using an almost identical setup to theirs, our VGG16 model only reached an accuracy of .64 compared to their accuracy of .89
+The VGG16 model was inspired by [this Kaggle notebook](https://www.kaggle.com/code/vtu5118/cifar-10-using-vgg16). I implemented data augmentation, a similar network structure with additional dense layers and dropout layers, the same SGD parameters with a learning rate of 0.001 and a momentum of 0.9, and the same epoch and batch size of 100 and 128, respectively. However, despite using an almost identical setup to theirs, my VGG16 model only reached an accuracy of .64 compared to their accuracy of 0.89
 
 ## Limitations and Possible Improvements
 

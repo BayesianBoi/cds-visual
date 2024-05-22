@@ -39,7 +39,7 @@ It should be inserted into the `/in` folder before proceeding with the analysis.
     python src/main_analysis.py
     ```
 
-### Extra scripts
+## Extra scripts
 The main analysis gave weird results for the early editions of GDL, indicating that up to 25% of the pages contained faces. Therefore, a sanity check was done to verify these results.
 
 1. **To run the extra script which analyses only the GDL 1790-1880 editions:**

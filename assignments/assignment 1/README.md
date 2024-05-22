@@ -33,9 +33,9 @@ The dataset is a collection of over 1000 images of flowers, sampled from 17 diff
     ```bash
     python src/image-search-hist.py <chosen_image_number>
     ```
-Takes a wanted image as argument. Replace `<chosen_image_number>` with the number of the target image (e.g., `1` for `image_0001.jpg`)
+Takes an image (between 1 and 1360) as argument. Replace `<chosen_image_number>` with the number of the target image (e.g., `1` for `image_0001.jpg`)
 
-### Extra scripts
+## Extra scripts
 
 ### VGG16 classification
 
@@ -43,10 +43,10 @@ Takes a wanted image as argument. Replace `<chosen_image_number>` with the numbe
     ```bash
     python src/image-search-VGG16.py <chosen_image_number>
     ```
-Takes a wanted image as argument. Replace `<chosen_image_number>` with the number of the target image (e.g., `1` for `image_0001.jpg`)
+Takes an image (between 1 and 1360) as argument. Replace `<chosen_image_number>` with the number of the target image (e.g., `1` for `image_0001.jpg`)
 
 ### Comparison between the results for the two methods
-Rank comparison between the identified most similar pictures between the two models
+Comparison between the identified most similar pictures between the two models
 
 - **Run the script:**
     ```bash
@@ -59,7 +59,7 @@ You need to run the scripts for both of the model before comparing the results
 ### Colour histogram
 
 #### Colour histogram results
-The CSV file contains the chi-squared distances of the top five similar images to **images 1** and can be found in `/out`
+The CSV file contains the chi-squared distances of the top five similar images to `image 1` and can be found in `/out`
 
 | Filename | Distance  |
 |----------|-----------|
@@ -69,17 +69,18 @@ The CSV file contains the chi-squared distances of the top five similar images t
 | image_1078.jpg | 191.69    |
 | image_0319.jpg | 191.88    |
 
-Top five most similar to image 1. Distance is the Chi-Squared distance from the target image
+Distance is the Chi-Squared distance from the target image
 
 #### Plot
-The plot shows the chosen target image and the top five similar images predicted by comparing colour histograms
+The plot shows the chosen target image and the top five similar images predicted by comparing colour histograms:
+
 
 ![Colour Histogram Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
 
-### VGG16 classification
+### VGG16
 
 #### VGG16 results
-The CSV file contains the Euclidean distances of the top five similar images to **images 1** and can be found in `/out`
+The CSV file contains the Euclidean distances of the top five similar images to `image 1` and can be found in `/out`
 
 | Filename       | Distance  |
 |----------------|-----------|
@@ -89,10 +90,11 @@ The CSV file contains the Euclidean distances of the top five similar images to 
 | image_0013.jpg | 58.08     |
 | image_0049.jpg | 58.15     |
 
-Top five most similar to image 1. Distance is the euclidean distance from the target image
+Distance is the euclidean distance from the target image
 
 #### Plot
-The plot shows the chosen target image and the top five similar images predicted by VGG16
+The plot shows the chosen target image and the top five similar images predicted by VGG16:
+
 
 ![VGG16 Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
@@ -103,7 +105,7 @@ A comparison was performed to find any overlaps between the top similar images f
 ![Colour Histogram Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
 
 
-### VGG16 classification 
+### VGG16
 ![VGG16 Plot](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
 
 ## Limitions and possible improvements

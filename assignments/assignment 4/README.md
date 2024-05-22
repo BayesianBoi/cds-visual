@@ -25,15 +25,14 @@ It should be inserted into the `/in` folder before proceeding with the analysis.
     ```bash
     sh setup.sh
     ```
-3. **Activate the virtual environment:**
+2. **Activate the virtual environment:**
     ```bash
     source envVis4/bin/activate
     ```
 
 ### Running the Code
-The project is structured with scripts saved in the `src` folder and the output saved in the `out` folder.
 
-1. **[Download](https://zenodo.org/records/3706863) and place the data in the `/in` folder**
+1. **[Download](https://zenodo.org/records/3706863) the data set and place the data in the `/in` folder**
 
 2. **Run the main analysis script:**
     ```bash

@@ -1,9 +1,9 @@
 # Assignment 2 - Classification benchmarks with Logistic Regression and Neural Networks
 
-## Repository Overview
+## Repository overview
 This repository contains scripts to classify the CIFAR-10 dataset using Logistic Regression and Neural Networks. Additionally, a CNN model using VGG16 is also implemented to check if the accuracy can be increased.
 
-### Assignment Objective:
+### Assignment objective:
 1. Load the CIFAR-10 dataset.
 2. Preprocess the data (e.g. grayscale, normalize, reshape).
 3. Train a classifier on the data:
@@ -12,10 +12,10 @@ This repository contains scripts to classify the CIFAR-10 dataset using Logistic
 4. Save a classification report.
 5. Save a plot of the loss curve during training (only for the MLP Classifier).
 
-## Data Source
+## Data source
 The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/cifar.html).
 
-## Steps to Run the Analysis
+## Steps to run the analysis
 
 ### Setting Up the Environment
 1. **Run the setup:**
@@ -24,7 +24,7 @@ The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/c
 sh setup.sh
 ```
 
-### Running the Analysis
+### Running the analysis
 The project is structured with scripts saved in the `src` folder and the output saved in the `out` folder.
 
 #### Logistic Regression
@@ -48,11 +48,11 @@ To run the VGG16 script:
 python src/vgg16_classifier.py
 ```
 
-## Summary of Results
+## Summary of results
 ### Logistic Regression
-##### **Model Accuracy: 0.32**
+##### **Model accuracy: 0.32**
 
-##### **Classification Report:**
+##### **Classification report:**
 
 | Class       | Precision | Recall | F1-Score | Support |
 |-------------|------------|--------|----------|---------|
@@ -71,13 +71,13 @@ python src/vgg16_classifier.py
 | **Weighted Avg** | 0.31 | 0.32   | 0.31     | 10000   |
 
 
-#### Confusion Matrix (LR):
+#### Confusion matrix (LR):
 ![Logistic Regression Confusion Matrix](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%202/out/cm_logistic.png)
 
 ### Neural Network
-##### **Model Accuracy: 0.43**
+##### **Model accuracy: 0.43**
 
-##### **Classification Report:**
+##### **Classification report:**
 
 | Class       | Precision | Recall | F1-Score | Support |
 |-------------|------------|--------|----------|---------|
@@ -96,18 +96,18 @@ python src/vgg16_classifier.py
 | **Weighted Avg** | 0.43 | 0.43   | 0.43     | 10000   |
 
 
-#### Confusion Matrix (NN):
+#### Confusion matrix (NN):
 ![Neural Network Confusion Matrix](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%202/out/cm_nn.png)
 
-#### Loss Curve (NN)
+#### Loss curve (NN)
 ![Neural Network Loss Curve](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%202/out/loss_curve_nn.png)
 
 ### VGG16 (CNN)
 Note: The VGG16 model implementation is additional exploration and not the primary focus of the assignment.
 
-#### **Model Accuracy: 0.64**
+#### **Model accuracy: 0.64**
 
-#### **Classification Report:**
+#### **Classification report:**
 
 | Class       | Precision | Recall | F1-Score | Support |
 |-------------|------------|--------|----------|---------|
@@ -126,7 +126,7 @@ Note: The VGG16 model implementation is additional exploration and not the prima
 | **Weighted Avg** | 0.64 | 0.64   | 0.63     | 10000   |
 
 
-#### Confusion Matrix (VGG16):
+#### Confusion matrix (VGG16):
 ![VGG16 Confusion Matrix](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%202/out/cm_vgg16.png)
 
 
@@ -134,12 +134,12 @@ Note: The VGG16 model implementation is additional exploration and not the prima
 
 ### Steps Taken for Logistic and Neural Network Regression
 
-**Logistic Regression:**
+### Logistic Regression:
 - **Preprocessing:** Images were converted to grayscale, normalized and flattened.
 - **Training:** The logistic regression model was trained using scikit-learn with hyperparameter tuning via GridSearch.
 - **Evaluation:** A classification report and confusion matrix were generated to evaluate model performance.
 
-**Neural Network:**
+### Neural Network:
 - **Preprocessing:** Similar preprocessing steps were taken as for logistic regression.
 - **Training:** An MLPClassifier from scikit-learn was used with hyperparameter tuning. Early stopping and model checkpointing were implemented to optimize training.
 - **Evaluation:** The model's performance was assessed using a classification report, loss-curve and confusion matrix.
@@ -151,7 +151,6 @@ The VGG16 model was inspired by [this Kaggle notebook](https://www.kaggle.com/co
 ## Limitations and Possible Improvements
 
 ### Limitations
-
 **1. Logistic Regression:**
 - Generally limited capability to capture complex patterns in the data, which could explain the low accuracy of .32 for the classification.
 - Looking at the heatmap, the logistic regression struggles with classes that are similar such as cats, and dogs.

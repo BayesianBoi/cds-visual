@@ -38,7 +38,7 @@ python src/main_analysis.py
 
 #### Extra scripts
 The main analysis gave weird results for the early editions of GDL, indicating that up to 25% of the pages contained faces. Therefore, a sanity check was done in order to see if that was true.
-To run the extra script which runs the same analysis but only the GDL 1780-1880 editions:
+To run the extra script which runs the same pipeline as the main analysis but only with the GDL 1780-1880 editions:
 
 ```bash
 python src/gdl_check.py
@@ -50,23 +50,29 @@ python src/plot_faces.py
 ```
 
 ## Summary of results
-*The CSV-file with all of the results can be found in the **/out** folder.*
-### Percentage of pages that contain faces per decade
-### Gazette de Lausanne (GDL)
+### CSV-file:
+The CSV-file with all of the results can be found in the **/out** folder.
+
+### Plots:
+
+#### Gazette de Lausanne (GDL)
 ![GDL](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/GDL_faces_plot.png)
 
 *Notice the prevalance of faces in the early 1800's while the other newspaper do not have any faces in their pages before the early 1900s.*
 
-### Journal de Genève (JDG)
+
+#### Journal de Genève (JDG)
 ![JDG](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/JDG_faces_plot.png)
 
-### Impartial (IMP)
+
+#### Impartial (IMP)
 ![IMP](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/IMP_faces_plot.png)
 
-### False positives in GDL newspaper (1790-1880)
+
+#### False positives in GDL newspaper (1790-1880)
 ![GDL False positives](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/sanity_check_for_GDL_1790_1880.png)
 
-**These are the pictures from GDL 1790-1880 that were detected to contain faces. Notice how none of the pages contain faces.**
+**These are all of the pictures from GDL 1790-1880 that were detected to contain faces. Notice that none of the pages contain faces.**
 
 *The log file showing which pages were detected to contain faces can be found in the **/out** folder*
 

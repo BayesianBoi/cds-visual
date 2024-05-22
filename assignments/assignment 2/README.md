@@ -12,7 +12,7 @@ This repository contains scripts to classify the CIFAR-10 dataset using Logistic
 4. Save a classification report.
 5. Save a plot of the loss curve during training (only for the MLP Classifier).
 
-## Data
+## Data Source
 The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 ## Steps to Run the Analysis
@@ -24,7 +24,7 @@ The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/c
 sh setup.sh
 ```
 
-### Running the Code
+### Running the Analysis
 The project is structured with scripts saved in the `src` folder and the output saved in the `out` folder.
 
 #### Logistic Regression
@@ -148,7 +148,7 @@ Note: The VGG16 model implementation is additional exploration and not the prima
 The VGG16 model was inspired by [this Kaggle notebook](https://www.kaggle.com/code/vtu5118/cifar-10-using-vgg16). We implemented data augmentation, a similar network structure with additional dense layers and dropout layers, the same SGD parameters with a learning rate of .001 and a momentum of .9, and the same epoch and batch size of 100 and 128, respectively. However, despite using an almost identical setup to theirs, our VGG16 model only reached an accuracy of .64 compared to their accuracy of .89.
 
 
-## Discussion of Limitations and Possible Improvements
+## Limitations and Possible Improvements
 
 ### Limitations
 

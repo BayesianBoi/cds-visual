@@ -64,7 +64,7 @@ The CSV-file with all of the results can be found in the `/out` folder.
 #### Gazette de Lausanne (GDL)
 ![GDL](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/GDL_faces_plot.png)
 
-*Notice the prevalance of faces in the early 1800's while the other newspaper do not have any faces in their pages before the early 1900s.*
+*Notice the prevalance of faces in the early 1800's while the other newspaper almost features no faces in their pages before the late 1880s.*
 
 
 #### Journal de Genève (JDG)

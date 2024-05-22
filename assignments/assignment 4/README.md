@@ -1,7 +1,7 @@
 # Assignment 4 - Detecting Faces in Historical Newspapers
 
 ## Repository overview
-This repository contains scripts to analyze historical newspapers for the presence of human faces. The primary goal is to detect and track the prevalence of faces in newspaper images over the past 200 years. 
+This repository contains scripts to analyze three historical newspapers for the presence of human faces. The primary goal is to detect and track the prevalence of faces in newspaper images over the past 200 years. 
 We use a pre-trained CNN model for face detection and analyse the results by decade.
 
 ### Assignment objective
@@ -36,9 +36,9 @@ sh setup.sh
 python src/main_analysis.py
   ```
 
-#### Extras
+#### Extra scripts
 The main analysis gave weird results for the early editions of GDL, indicating that up to 25% of the pages contained faces. Therefore, a sanity check was done in order to see if that was true.
-To run the extra script which run the same analysis but only the GDL 1780-1880 editions:
+To run the extra script which runs the same analysis but only the GDL 1780-1880 editions:
 
 ```bash
 python src/gdl_check.py
@@ -50,14 +50,25 @@ python src/plot_faces.py
 ```
 
 ## Summary of results
+*The CSV-file with all of the results can be found in the **/out** folder.*
 ### Percentage of pages that contain faces per decade
-#### Gazette de Lausanne (GDL)
+### Gazette de Lausanne (GDL)
+![GDL](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/GDL_faces_plot.png)
 
-#### Journal de Genève (JDG)
+*Notice the prevalance of faces in the early 1800's while the other newspaper do not have any faces in their pages before the early 1900s.*
 
-#### Impartial (IMP)
+### Journal de Genève (JDG)
+![JDG](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/JDG_faces_plot.png)
 
-### Detected faces in GDL newspaper (1790-1880)
+### Impartial (IMP)
+![IMP](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/IMP_faces_plot.png)
+
+### False positives in GDL newspaper (1790-1880)
+![GDL False positives](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%204/out/sanity_check_for_GDL_1790_1880.png)
+
+**These are the pictures from GDL 1790-1880 that were detected to contain faces. Notice how none of the pages contain faces.**
+
+*The log file showing which pages were detected to contain faces can be found in the **/out** folder*
 
 ## Discussion
 ### Key points
@@ -65,15 +76,14 @@ python src/plot_faces.py
 - All of the newspapers show a rise in face images around the 20th century, which could reflect the advances in photographic technology through that centuary.
 
 ### False positives in GDL (1790-1880)
-The analysis of the GDL newspaper from 1790 to 1880 indicates purely false positives. The model incorrectly identifies faces in images from this period, likely due to the lower quality and nature of the printed images.
+The primary analysis indicated that for some of the early 1800s decades, up to 25% of all the pages contained faces. However, as shown in the plot above those were all purely false positives.
 
 ### Historical context
-The results align with historical developments in print media. The introduction of photographic technology in the 19th century and its widespread adoption in the 20th century led to an increase in images, 
-including human faces, in newspapers. This reflects broader cultural and technological shifts towards more visually-oriented media.
+The results align with historical developments in print media. The first image brought in a newspaper was in 1848, and the first publically available camera was the Kodak, which was introduced in 1888. Therefore, any faces detected before 1848 should be assumed to be false positives. However, we only did a sanity check for the GDL. From that point on the prevalence of faces in the newspapers seem to increase. Generally, after the introduction of the first camera, it seems a shift towards more visually-oriented media happened.
 
 ## Limitations and possible improvements
 ### Limitations
-- **False positives:** The model shows a significant number of false positives, especially in older newspapers where the print quality is lower.
+- **False positives:** The model shows a large number of false positives for the early editions of the GDL. These false positives might be caused by the print quality is lower. I doubt that the ResNes model is trained on data that even remotely resembles pictures in old newspapers.
 - **Data quality:** Variations in the quality and type of newspaper images can affect the accuracy of face detection.
 
 ### Possible improvements

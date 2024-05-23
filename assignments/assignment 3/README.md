@@ -32,7 +32,7 @@ The dataset used is a subset of the Tobacco3482 dataset. It contains images of 1
 
 2. **Run the main analysis script:**
     ```bash
-    python src/main_analysis.py
+    python main.py
     ```
 This script will load the data, train the model and evaluate the model.
 
@@ -63,10 +63,10 @@ This script will load the data, train the model and evaluate the model.
 
 ## Discussion
 ### Key points
-The model achieved an overall accuracy of 84%, which is good given the task of document classification based on visual appearance alone. I have seen other multi-modal approaches that reached a similar accuracy. The confusion matrix indicates that most classes are predicted well.
+The model achieved an overall accuracy of 84%, which is good given the task of document classification based on visual appearance alone. I have seen others use multi-modal approaches that reached a similar accuracy. The confusion matrix indicates that most classes are predicted well.
 
 ### Loss curve
-The training and validation loss curves show that the model converged well. Initially, the validation loss decreased alongside the training loss, which is a good indication that the model was learning effectively. After a few epochs, the validation loss began to stabilize, suggesting that the model had learned the important features for classification and was no longer improving significantly. There is no significant sign of overfitting as the validation loss does not increase substantially.
+The training and validation loss curves show that the model converged well. Initially, the validation loss decreased alongside the training loss, which is a good indication that the model was learning effectively. After a few epochs, the validation loss began to stabilize, suggesting that the model had learned the important features for classification and was no longer improving significantly. There is no significant sign of overfitting as the validation loss does not increase by a lot.
 
 ## Limitations and possible steps
 ### Limitations 
@@ -75,4 +75,4 @@ The training and validation loss curves show that the model converged well. Init
 ### Possible improvements
 - **Further Fine-Tuning:** More fine-tuning of the pretrained VGG16 model could potentially improve accuracy. I have tried countless different setups and this was the one that reached the highest accuracy. Similarly to further tweaking the model, changing parameters such as learning rate, batch size, and dropout rate might give better results. Also been tweaking around with them and the current ones were the ones that gave the best results.
 - **Additional Data:** Given the model the full data set (rather than a subset) would most likely increase the accuracy (as the subset is quite imbalanced in terms of how well the different categories of documents are represented)
-- **Multi-modal Approaches:** Combining the image data analysed here with a language model could yield better accuracy. As the visual representation of many of the document types are similar, the language model using the contents of the documents could better help distinguish them.
+- **Multi-modal Approaches:** Combining the image data analysed here with a language model could yield better accuracy. As the visual representation of many of the document types are similar, a language model using the contents of the documents could better help distinguish them.

@@ -29,14 +29,14 @@ The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/c
 ### Running the Code
 
 #### Logistic Regression
-- **To run the logistic regression script:**
+- **To run the Logistic Regression script:**
 
 ```bash
 python src/logistic_regression.py
 ```
 
 #### Neural Network
-- **To run the neural network script:**
+- **To run the Neural Network script:**
 
 ```bash
 python src/neural_network.py
@@ -51,7 +51,7 @@ python src/vgg16_classifier.py
 
 ## Summary of results
 ### Logistic Regression
-##### **Model accuracy: 0.32**
+##### **Model accuracy: 0.31**
 
 ##### **Classification report:**
 

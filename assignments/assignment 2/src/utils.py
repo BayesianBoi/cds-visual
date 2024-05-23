@@ -9,7 +9,7 @@ import cv2
 CIFAR10_LABELS = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"] 
 
 # making sure that the out folder exists
-def create_output_dir(directory="../out"):
+def create_output_dir(directory="out"):
     """
     Creates the output folder if it does not already exist
     """

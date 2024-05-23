@@ -23,7 +23,7 @@ It should be inserted into the `/in` folder before proceeding with the analysis.
 ### Setting up the environment
 1. **Set up the virtual environment and install requirements:**
     ```bash
-    sh setup.sh
+    bash setup.sh
     ```
 2. **Activate the virtual environment:**
     ```bash

@@ -35,7 +35,7 @@ def train_and_evaluate_nn(X_train, y_train, X_test, y_test, cifar10_labels, hidd
     
     return nn_model, accuracy, report, CMatrix
 
-def plot_loss_curve(nn_model, output_path="../out/loss_curve_nn.png"):
+def plot_loss_curve(nn_model, output_path="out/loss_curve_nn.png"):
     """
     For plotting the loss curve
     """
@@ -65,11 +65,11 @@ def main():
     print(f"Model Accuracy: {accuracy:.2f}")
     print(report)
     
-    with open("../out/report_nn.txt", "w") as f:
+    with open("out/report_nn.txt", "w") as f:
         f.write(report)
     
     plot_loss_curve(nn_model)
-    plot_confusion_matrix(CMatrix, cifar10_labels, "Confusion Matrix - NN", "../out/CM_nn.png")
+    plot_confusion_matrix(CMatrix, cifar10_labels, "Confusion Matrix - NN", "out/CM_nn.png")
 
 if __name__ == "__main__":
     main()

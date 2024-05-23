@@ -20,7 +20,7 @@ The dataset used is a subset of the Tobacco3482 dataset. It contains images of 1
 ### Setting up the environment
 1. **Set up the virtual environment and install requirements:**
     ```bash
-    sh setup.sh
+    bash setup.sh
     ```
 2. **Activate the virtual environment:**
     ```bash

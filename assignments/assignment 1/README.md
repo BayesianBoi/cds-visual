@@ -11,7 +11,7 @@ The objective of this task is to build a simple image search algorithm using a d
 4. Compare the histogram of the target image to all other histograms using the `cv2.compareHist()` function with the `cv2.HISTCMP_CHISQR` metric
 5. Find the five images which are most similar to the target image
 6. Save a CSV file showing the five most similar images and their distance metrics
-7. Do step 5-6 using a pre-trained CNN
+7. Repeat step 5-6 using a pre-trained CNN
 
 ## Data source
 The dataset is a collection of over 1000 images of flowers, sampled from 17 different species. The dataset comes from the Visual Geometry Group at the University of Oxford. Download the dataset from [here](http://www.robots.ox.ac.uk/~vgg/data/flowers/17/) and place the images in the `../in/flowers` directory

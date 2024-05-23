@@ -31,8 +31,8 @@ def resize_image(image, size=(300, 300)):
 
 # Main pipeline- taking the chosen image number as input
 def main(chosen_image_number):
-    input_folder = os.path.join("..", "in", "flowers") # Path to the input folder containing the flower images
-    output_folder = os.path.join("..", "out") # Path to the output folder
+    input_folder = os.path.join("in", "flowers") # Path to the input folder containing the flower images
+    output_folder = os.path.join("out") # Path to the output folder
 
     # Loading the chosen image from the path
     chosen_image_filename = f"image_{int(chosen_image_number):04d}.jpg" # instead of taking "image_0001.jpg" as the input, it will simply take "1" as the input

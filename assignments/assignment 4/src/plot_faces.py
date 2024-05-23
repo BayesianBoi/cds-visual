@@ -3,8 +3,8 @@ from PIL import Image
 import os
 
 # paths
-log_file_path = '../out/gdl_detection_1790_1880.log'  # path to log file
-input_folder = '../in/GDL'  # path to gdl pages
+log_file_path = 'out/gdl_detection_1790_1880.log'  # path to log file
+input_folder = 'in/GDL'  # path to gdl pages
 
 # load in the log file and extract image paths with detected faces
 detected_faces = []  # list to store paths of images where faces were detected

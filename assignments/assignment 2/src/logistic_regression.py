@@ -49,7 +49,7 @@ def main():
     print(report)
     
     # Save classification report
-    with open("../out/report_lr.txt", "w") as f:
+    with open("out/report_lr.txt", "w") as f:
         f.write(report)
     
     # Plot and save confusion matrix

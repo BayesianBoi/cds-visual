@@ -72,12 +72,6 @@ The CSV file contains the Chi-Squared distances of the top five images predicted
 
 Distance is the Chi-Squared distance from the target image
 
-#### Plot
-The plot shows the chosen target image and the top five similar images predicted by comparing colour histograms:
-
-
-![Colour Histogram Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/hist_plot_0001.png)
-
 ### VGG16
 
 #### VGG16 results
@@ -91,13 +85,7 @@ The CSV file contains the Euclidean distances of the top five images predicted a
 | image_0013.jpg | 58.08     |
 | image_0049.jpg | 58.15     |
 
-Distance is the euclidean distance from the target image
-
-#### Plot
-The plot shows the chosen target image and the top five similar images predicted by VGG16:
-
-
-![VGG16 Results](https://github.com/BayesianBoi/cds-visual/blob/main/assignments/assignment%201/out/vgg16_plot_0001.png)
+Distance is the Euclidean distance from the target image
 
 ## Comparison
 Euclidean and Chi-Squared distances are not comparable. So, a comparison was performed to find any overlaps between the top five most similar images predicted by both methods. The comparison shows no overlap for the predicted top five images between the two methods

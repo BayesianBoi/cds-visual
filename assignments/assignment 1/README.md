@@ -21,7 +21,7 @@ The dataset is a collection of over 1000 images of flowers, sampled from 17 diff
 ### Setting up the environment
 1. **Set up the virtual environment and install requirements:**
     ```bash
-    sh setup.sh
+    bash setup.sh
     ```
 2. **Activate the virtual environment:**
     ```bash

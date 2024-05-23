@@ -97,11 +97,11 @@ def main():
     print(report)
     
     # Save classification report
-    with open("../out/report_vgg16.txt", "w") as f:
+    with open("out/report_vgg16.txt", "w") as f:
         f.write(report)
     
     # Plot and save confusion matrix
-    plot_confusion_matrix(CMatrix, CIFAR10_LABELS, "Confusion Matrix - CNN", "../out/CM_vgg16.png")
+    plot_confusion_matrix(CMatrix, CIFAR10_LABELS, "Confusion Matrix - CNN", "out/CM_vgg16.png")
 
 if __name__ == "__main__":
     main()

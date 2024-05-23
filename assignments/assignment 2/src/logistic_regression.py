@@ -53,7 +53,7 @@ def main():
         f.write(report)
     
     # Plot and save confusion matrix
-    plot_confusion_matrix(CMatrix, cifar10_labels, "Confusion Matrix - Logistic", "../out/CM_logistic.png")
+    plot_confusion_matrix(CMatrix, cifar10_labels, "Confusion Matrix - Logistic", "out/CM_logistic.png")
 
 if __name__ == "__main__":
     main()

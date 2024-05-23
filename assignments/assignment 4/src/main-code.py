@@ -90,8 +90,8 @@ def save_results_and_plot(results, output_folder):
 
 if __name__ == "__main__":
     # Define the folders
-    input_folder = "../in"
-    output_folder = "../out"
+    input_folder = "in"
+    output_folder = "out"
     newspapers = ["GDL", "JDG", "IMP"]
 
     # Process newspapers (main pipeline)

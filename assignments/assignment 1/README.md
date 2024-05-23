@@ -104,5 +104,5 @@ Colour histograms are insensitive to texture and shape; meaning it only compares
 
 ### Possible improvements
 #### Using more advanced methods
-The VGG16 classification method outperformed the colour histogram method in identifying similar images. The VGG16 model correctly classified all five similar images while the colour histogram method did not correctly classify any of the predicted similar images.
+The VGG16 classification method outperformed the colour histogram method in identifying similar images. The VGG16 model correctly classified all five similar images while the colour histogram method did not correctly classify any of the similar images.
 

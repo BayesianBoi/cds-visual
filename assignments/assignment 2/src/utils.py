@@ -10,10 +10,16 @@ CIFAR10_LABELS = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog"
 
 # making sure that the out folder exists
 def create_output_dir(directory="../out"):
+    """
+    Creates the output folder if it does not already exist
+    """
     if not os.path.exists(directory):
         os.makedirs(directory)
 
 def load_and_preprocess_data():
+    """
+    Loads the cifar10 data and preprocesses the data (flattening the labels, greyscale, normalize, reshape)
+    """
     (X_train, y_train), (X_test, y_test) = cifar10.load_data() # loading the cifar data
     y_train = y_train.flatten() #flatteniing the labels as they are 2 dimensional right now
     y_test = y_test.flatten() #flattening the labels as they are 2 dimensional right now
@@ -33,6 +39,9 @@ def load_and_preprocess_data():
     return X_train_processed, y_train, X_test_processed, y_test, CIFAR10_LABELS
 
 def plot_confusion_matrix(cm, labels, title, output_path):
+    """
+    Plots a confusion matrix
+    """
     plt.figure(figsize=(10, 7))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels) # seaborn heatmap
     plt.title(title)

@@ -13,7 +13,7 @@ with open(log_file_path, 'r') as log_file:
     for line in lines:
         if 'Detected' in line:  # check if the line contains "Detected" and if it does, it will proceed
             parts = line.strip().split(' ')  # split the line into parts based on space
-            image_path = parts[-1]  # take the last part of the split, which is the file path to the image
+            image_path = os.path.join(input_folder, os.path.basename(parts[-1]))  # take the last part of the split, which is the file path to the image
             detected_faces.append(image_path)  # add the image path to the list
 
 # organize images by decade
@@ -27,7 +27,7 @@ for image_path in detected_faces:
     decade_images[decade].append(image_path)  # add the image path to the list for the decade
 
 # define the output folder for the plots
-output_folder = '../out'
+output_folder = 'out'
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)  # create the output directory if it doesn't exist
 
@@ -41,7 +41,6 @@ num_rows = 2
 # plot images across multiple rows
 fig, axes = plt.subplots(num_rows, images_per_row, figsize=(20, 5 * num_rows))
 fig.suptitle('Faces Detected in GDL Newspapers from 1790-1880')
-
 
 for idx, (decade, img_path) in enumerate(image_list):
     row = idx // images_per_row

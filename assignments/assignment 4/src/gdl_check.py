@@ -12,7 +12,7 @@ It analyses the images the same way as the main script but is limited to pages i
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 # setting up the logging. Going to log each individual image and state whether it saw a image or not
-log_file_path = os.path.join(output_folder, 'gdl_detection_1790_1880.log') # setting up the output folder
+log_file_path = os.path.join("out", 'gdl_detection_1790_1880.log') # setting up the output folder
 logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(message)s')
 
 # Loading the pre-trained ResNet model
@@ -55,7 +55,7 @@ def process_newspapers(input_folder, newspaper):
 
 if __name__ == "__main__":
     # define the folders
-    input_folder = "../in"
+    input_folder = "in"
     newspapers = ["GDL"] #only for gdl now
 
     # process newspapers (main pipeline)

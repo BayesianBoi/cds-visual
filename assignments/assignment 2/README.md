@@ -140,8 +140,8 @@ Note: The VGG16 model implementation is additional exploration and not the prima
 - **Evaluation:** A classification report and confusion matrix were generated to evaluate model performance
 
 ### Neural Network:
-- **Preprocessing:** Similar preprocessing steps were taken as for logistic regression.
-- **Training:** An MLPClassifier from scikit-learn was used with hyperparameter tuning. Early stopping and model checkpointing were implemented to optimize training
+- **Preprocessing:** Same preprocessing steps were taken as for logistic regression.
+- **Training:** A MLPClassifier from scikit-learn also tuning the hypermeters via GridSearch. Early stopping and model checkpointing were implemented to optimize the training
 - **Evaluation:** The model's performance was assessed using a classification report, loss-curve and confusion matrix
 
 ### Considerations for the VGG16 Model
@@ -151,11 +151,11 @@ The VGG16 model was inspired by [this Kaggle notebook](https://www.kaggle.com/co
 
 ### Limitations
 **1. Logistic Regression:**
-- LR generally is quite bad at capturing complex patterns in the data, which could explain the low accuracy of 0.32
+- Logistic Regression generally struggles to capture complex patterns in the data, which likely explains its low accuracy of 0.32
 - Looking at the heatmap, the logistic regression struggles with classes that are similar in representation such as cats and dogs
 
 **2. Neural Network:**
-- Despite being more accurate than logistic regression, the MLP used here still struggles with the classification at an accuracy of just below chance 0.43
+- Despite being more accurate than logistic regression, the MLP used here still struggles with the classification, achieving an accuracy of 0.43. The loss curve shows the training loss is still decreasing, suggesting possible that would could increase the accuracy more. However, these gains would be minimal as the loss reduction per iteration is now minimal. The training was stopped by the early stopping mechanism to prevent overfitting, indicating the model had likely reached its performance limit.
 - Similar to the logistic regression, the heatmap also suggests misclassifications between similar classes
 
 ### Possible improvements

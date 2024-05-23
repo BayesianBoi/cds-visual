@@ -53,8 +53,6 @@ python src/vgg16_classifier.py
 ### Logistic Regression
 ##### **Model accuracy: 0.31**
 
-##### **Classification report:**
-
 | Class       | Precision | Recall | F1-Score | Support |
 |-------------|------------|--------|----------|---------|
 | Airplane    | 0.34       | 0.39   | 0.36     | 1000    |
@@ -77,8 +75,6 @@ python src/vgg16_classifier.py
 
 ### Neural Network
 ##### **Model accuracy: 0.43**
-
-##### **Classification report:**
 
 | Class       | Precision | Recall | F1-Score | Support |
 |-------------|------------|--------|----------|---------|
@@ -106,9 +102,7 @@ python src/vgg16_classifier.py
 ### VGG16 (CNN)
 Note: The VGG16 model implementation is additional exploration and not the primary focus of the assignment
 
-#### **Model accuracy: 0.64**
-
-#### **Classification report:**
+###### **Model accuracy: 0.64**
 
 | Class       | Precision | Recall | F1-Score | Support |
 |-------------|------------|--------|----------|---------|

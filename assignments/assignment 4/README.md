@@ -36,7 +36,7 @@ It should be inserted into the `/in` folder before proceeding with the analysis.
 
 2. **Run the main analysis script:**
     ```bash
-    python src/main_analysis.py
+    python src/main-code.py
     ```
 
 ## Extra scripts

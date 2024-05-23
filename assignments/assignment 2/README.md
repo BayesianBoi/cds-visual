@@ -19,7 +19,7 @@ The used CIFAR-10 dataset can be found [here](https://www.cs.toronto.edu/~kriz/c
 ### Setting up the environment
 1. **Set up the virtual environment and install requirements:**
     ```bash
-    sh setup.sh
+    bash setup.sh
     ```
 2. **Activate the virtual environment:**
     ```bash

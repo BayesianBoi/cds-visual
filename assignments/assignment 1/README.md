@@ -100,7 +100,7 @@ Euclidean and Chi-Squared distances are not comparable. So, a comparison was per
 ## Limitations and possible improvements
 ### Limitations
 #### Colour histogram
-Colour histograms are insensitive to texture and shape; meaning it only compares colour distributions and does not consider texture, shape, or other important visual features that contribute to image similarity. In this case, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
+Colour histograms are insensitive to texture and shape; meaning it only compares colour distributions and does not consider texture, shape or other important visual features that contribute to image similarity. In this case, the chosen image (image #1) is of a daffodil. However, none of the top five most similar images are of a daffodil. This highlights the flaws of the colour histogram-comparison method and suggests that other methods might be more suitable for finding similar pictures.
 
 ### Possible improvements
 #### Using more advanced methods

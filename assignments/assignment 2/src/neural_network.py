@@ -10,7 +10,7 @@ from utils import create_output_dir, load_and_preprocess_data, plot_confusion_ma
 # Grid search. However, we have already found the most optimal parameters, so not using it anymore
 def NN_grid_search(X_train, y_train):
     """
-    Grid search to find the best parameters
+    For finding the most optimal parameters
     """
     parameter_grid = {
         "hidden_layer_sizes": [(50,), (100,), (100, 100), (200,)],

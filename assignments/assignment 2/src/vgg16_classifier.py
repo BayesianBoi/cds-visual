@@ -17,6 +17,9 @@ from utils import create_output_dir, plot_confusion_matrix, CIFAR10_LABELS
 
 # Function to load and preprocess data for VGG16
 def vgg16_load_and_preprocess_data():
+    """
+    Loads the cifar10 data and preprocesses the data using the inbuilt preprocessing function. Also converting the labels.
+    """
     (X_train, y_train), (X_test, y_test) = cifar10.load_data()
     y_train = to_categorical(y_train.flatten(), num_classes=10) # converting class vectors to binary class matrices 
     y_test = to_categorical(y_test.flatten(), num_classes=10) # converting class vectors to binary class matrices 
@@ -29,6 +32,9 @@ def vgg16_load_and_preprocess_data():
 
 # Function to load the VGG16 model
 def load_vgg16_model(input_shape): #using the same layers as the kaggle 
+    """
+    Sets up the VGG16 model using almost the same parameters as this kaggle-notebook: https://www.kaggle.com/code/vtu5118/cifar-10-using-vgg16
+    """
     base_model = VGG16(weights="imagenet", include_top=False, input_shape=input_shape)
     model = Sequential([
         base_model,
